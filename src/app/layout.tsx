@@ -47,13 +47,7 @@ export default function RootLayout({
         <PopupProvider>
           <Header />
           <main className="pt-[100px]">
-            <Hero />
-            <LogoCloud />
-            <ServicesSection />
-            <AboutUsSection />
-            <WhyHireUs />
-            <BlogSection />
-            <ContactSection />
+            {children}
           </main>
           <Footer />
         </PopupProvider>
