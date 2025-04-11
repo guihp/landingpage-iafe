@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import LogoCloud from "@/components/LogoCloud";
+import ServicesSection from "@/components/ServicesSection";
+import AboutUsSection from "@/components/AboutUsSection";
+import WhyHireUs from "@/components/WhyHireUs";
+import BlogSection from "@/components/BlogSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+import WelcomePopup from "@/components/WelcomePopup";
+import { PopupProvider } from "@/contexts/PopupContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +21,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -23,11 +40,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
-        {children}
+        <PopupProvider>
+          <Header />
+          <main className="pt-[100px]">
+            <Hero />
+            <LogoCloud />
+            <ServicesSection />
+            <AboutUsSection />
+            <WhyHireUs />
+            <BlogSection />
+            <ContactSection />
+          </main>
+          <Footer />
+        </PopupProvider>
+        <WelcomePopup />
       </body>
     </html>
   );
