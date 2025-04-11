@@ -1,7 +1,6 @@
 'use client'; // Necessário para useState
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react'; // Importa useState
 
 // Ícone de Seta - Lógica de rotação agora usa isActive OU group-hover
@@ -17,8 +16,6 @@ interface ServiceCardProps {
   titleParts: string[];
   description: string;
   iconSrc: string;
-  iconAlt: string;
-  linkHref: string;
   linkLabel?: string;
 }
 
@@ -26,8 +23,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   titleParts,
   description,
   iconSrc,
-  iconAlt,
-  linkHref,
   linkLabel = "Saiba Mais"
 }) => {
   const [isActive, setIsActive] = useState(false);
