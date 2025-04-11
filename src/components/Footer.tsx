@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 // Importe ícones (exemplo usando react-icons, instale com: npm install react-icons)
 // Se não quiser usar react-icons, substitua por SVGs ou outros componentes
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 import { usePopup } from '@/contexts/PopupContext'; // Importar hook do contexto
 
 const Footer = () => {

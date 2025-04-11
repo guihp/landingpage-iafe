@@ -1,7 +1,6 @@
 'use client'; // Necessário para manipulação do DOM (scrollTo)
 
 import Image from 'next/image';
-import Link from 'next/link'; // Se o botão levar a algum lugar
 
 const Hero = () => {
 

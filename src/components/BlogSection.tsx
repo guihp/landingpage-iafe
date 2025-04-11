@@ -2,10 +2,9 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link'; // Link não é usado
 import { usePopup } from '@/contexts/PopupContext';
-import { PopupContent } from '@/data/popupData';
-
+// import { PopupContent } from '@/data/popupData'; // PopupContent não é usado diretamente aqui
 // Dados de exemplo para os posts do blog (mantidos como antes)
 const posts = [
   { id: 'IA PARA RH', imgSrc: "/blog-rh.png", category: "IAFÉ", title: "IA PARA RH", description: "Uma IA para otimizar a comunicação entre o RH e os colaboradores", buttonLabel: "Saiba Mais" },

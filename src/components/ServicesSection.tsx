@@ -69,8 +69,6 @@ const ServicesSection = () => {
               titleParts={service.titleParts}
               description={service.description}
               iconSrc={service.iconSrc}
-              iconAlt={service.iconAlt}
-              linkHref={service.linkHref}
             />
           ))}
         </div>

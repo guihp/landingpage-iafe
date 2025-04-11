@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+// import Header from "@/components/Header"; // Header agora está no layout
 import Hero from "@/components/Hero";
 import LogoCloud from "@/components/LogoCloud";
 import ServicesSection from "@/components/ServicesSection";
